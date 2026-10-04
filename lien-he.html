@@ -1,632 +1,1042 @@
-<section class="dootea-contact">
-    <div class="contact-container">
+<!DOCTYPE html>
+<html lang="vi">
 
-        <!-- Thông tin thương hiệu -->
-        <div class="contact-brand">
-            <img src="images/logo.png"
-                 alt="Dootea Logo"
-                 class="brand-logo">
+<head>
 
-            <p>
-                Thưởng thức hương vị trà tự nhiên,
-                tận hưởng những khoảnh khắc tuyệt vời
-                cùng Dootea.
-            </p>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Liên hệ với Dootea - Thương hiệu trà Việt">
+
+    <title>Liên hệ | Dootea</title>
+
+    <!-- CSS chung của website -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- CSS riêng cho trang Liên hệ -->
+    <style>
+
+        /* =====================================================
+           PHẦN CHUNG
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            width: 100%;
+            padding: 18px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background-color: white;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        /* Logo */
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* Menu */
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            gap: 0;
+
+            background-color: #765237;
+
+            padding: 0;
+
+            border-radius: 6px;
+
+            overflow: hidden;
+        }
+
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            padding: 15px 22px;
+
+            border-right: 1px solid rgba(255,255,255,0.4);
+
+            transition: 0.3s;
+        }
+
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+
+        nav a:hover {
+            background-color: #8b6544;
+
+            color: #f3dfc1;
+        }
+
+
+        /* =====================================================
+           PHẦN LIÊN HỆ
+        ===================================================== */
+
+        .dootea-contact {
+
+            background-color: #f4f8f1;
+
+            padding: 60px 30px;
+
+            color: #333;
+
+        }
+
+
+        /* Bố cục 3 cột */
+
+        .contact-container {
+
+            max-width: 1350px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1.25fr
+                1.3fr;
+
+            gap: 55px;
+
+            align-items: center;
+
+        }
+
+
+        /* =====================================================
+           CỘT 1 - LOGO DOOTEA
+        ===================================================== */
+
+        .contact-brand {
+
+            text-align: center;
+
+        }
+
+
+        .brand-logo {
+
+            width: 135px;
+
+            height: 135px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-brand p {
+
+            line-height: 1.8;
+
+            color: #555;
+
+            font-size: 19px;
+
+            font-weight: 500;
+
+            margin: 15px 0 0;
+
+        }
+
+
+        /* =====================================================
+           CỘT 2 - THÔNG TIN LIÊN HỆ
+        ===================================================== */
+
+        .contact-info {
+
+            width: 100%;
+
+        }
+
+
+        .contact-info h3 {
+
+            color: #6e4824;
+
+            margin: 0 0 30px;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        /* Từng dòng */
+
+        .contact-item {
+
+            display: grid;
+
+            grid-template-columns: 45px 1fr;
+
+            align-items: start;
+
+            column-gap: 15px;
+
+            margin-bottom: 25px;
+
+            min-height: 55px;
+
+        }
+
+
+        /* Icon */
+
+        .contact-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            line-height: 1;
+
+        }
+
+
+        /* Nội dung */
+
+        .contact-content {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            min-height: 45px;
+
+        }
+
+
+        .contact-item strong {
+
+            display: block;
+
+            margin: 0 0 5px;
+
+            color: #397c3b;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            line-height: 1.3;
+
+        }
+
+
+        .contact-item a,
+        .contact-item p {
+
+            color: #555;
+
+            text-decoration: none;
+
+            margin: 0;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            line-height: 1.5;
+
+            word-break: break-word;
+
+        }
+
+
+        .contact-item a:hover {
+
+            color: #397c3b;
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =====================================================
+           CỘT 3 - BẢN ĐỒ
+        ===================================================== */
+
+        .contact-image {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .contact-image img {
+
+            width: 100%;
+
+            max-width: 100%;
+
+            height: auto;
+
+            border-radius: 18px;
+
+            display: block;
+
+            box-shadow:
+                0 6px 22px rgba(0, 0, 0, 0.12);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background-color: #E8F0E5;
+
+            color: #333;
+
+            padding: 50px 8% 20px;
+
+            border-top: 8px solid #765237;
+
+            font-family: "Times New Roman", serif;
+
+        }
+
+
+        .footer-content {
+
+            max-width: 1350px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+        }
+
+
+        .footer-column {
+
+            flex: 1;
+
+        }
+
+
+        .footer-column h3 {
+
+            color: #765237;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            margin: 0 0 20px;
+
+        }
+
+
+        .footer-column p {
+
+            color: #555;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            margin: 0 0 10px;
+
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #555;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            margin-bottom: 12px;
+
+            line-height: 1.4;
+
+        }
+
+
+        .footer-column a:hover {
+
+            color: #397c3b;
+
+        }
+
+
+        /* Copyright */
+
+        .footer-bottom {
+
+            max-width: 1350px;
+
+            margin: 30px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #cdd8c9;
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                padding: 15px 5%;
+
+            }
+
+
+            nav a {
+
+                padding: 13px 14px;
+
+                font-size: 14px;
+
+            }
+
+
+            .contact-container {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 40px;
+
+            }
+
+
+            .contact-image {
+
+                grid-column: 1 / -1;
+
+            }
+
+
+            .contact-image img {
+
+                width: 100%;
+
+                height: auto;
+
+            }
+
+
+            .footer-content {
+
+                flex-wrap: wrap;
+
+            }
+
+
+            .footer-column {
+
+                flex: 1 1 40%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           ĐIỆN THOẠI
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 15px 20px;
+
+            }
+
+
+            nav {
+
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            nav a {
+
+                font-size: 13px;
+
+                padding: 12px 10px;
+
+            }
+
+
+            .dootea-contact {
+
+                padding: 45px 20px;
+
+            }
+
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+            }
+
+
+            .contact-brand {
+
+                text-align: center;
+
+            }
+
+
+            .contact-info {
+
+                padding: 0 10px;
+
+            }
+
+
+            .contact-info h3 {
+
+                font-size: 23px;
+
+            }
+
+
+            .contact-item {
+
+                grid-template-columns: 45px 1fr;
+
+            }
+
+
+            .contact-image {
+
+                grid-column: auto;
+
+            }
+
+
+            .contact-image img {
+
+                width: 100%;
+
+                height: auto;
+
+            }
+
+
+            footer {
+
+                padding: 40px 25px 20px;
+
+            }
+
+
+            .footer-content {
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+            }
+
+
+            .footer-column {
+
+                width: 100%;
+
+            }
+
+
+            .footer-column h3 {
+
+                font-size: 21px;
+
+            }
+
+
+            .footer-column p,
+            .footer-column a {
+
+                font-size: 17px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png"
+                     alt="Dootea Logo">
+
+            </a>
+
         </div>
 
 
-        <!-- Thông tin liên hệ -->
-        <div class="contact-info">
+        <!-- Menu -->
 
-            <h3>THÔNG TIN LIÊN HỆ</h3>
+        <nav>
 
-            <div class="contact-item">
-                <span class="contact-icon">📘</span>
+            <a href="index.html">
+                Trang chủ
+            </a>
 
-                <div class="contact-content">
-                    <strong>Facebook</strong>
+            <a href="gioi-thieu.html">
+                Giới thiệu
+            </a>
 
-                    <a href="https://www.facebook.com/dootea"
-                       target="_blank">
-                        facebook.com/dootea
-                    </a>
-                </div>
+            <a href="san-pham.html">
+                Sản phẩm
+            </a>
+
+            <a href="lien-he.html">
+                Liên hệ
+            </a>
+
+            <a href="gio-hang.html">
+                Giỏ hàng
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PHẦN LIÊN HỆ
+    ===================================================== -->
+
+    <section class="dootea-contact">
+
+
+        <div class="contact-container">
+
+
+            <!-- =========================
+                 CỘT 1 - GIỚI THIỆU
+            ========================= -->
+
+            <div class="contact-brand">
+
+                <img src="images/logo.png"
+                     alt="Dootea Logo"
+                     class="brand-logo">
+
+
+                <p>
+
+                    Thưởng thức hương vị trà tự nhiên,
+                    tận hưởng những khoảnh khắc tuyệt vời
+                    cùng Dootea.
+
+                </p>
+
             </div>
 
 
-            <div class="contact-item">
-                <span class="contact-icon">📞</span>
 
-                <div class="contact-content">
-                    <strong>Điện thoại</strong>
+            <!-- =========================
+                 CỘT 2 - THÔNG TIN
+            ========================= -->
 
-                    <a href="tel:0987654321">
-                        0987 654 321
-                    </a>
+            <div class="contact-info">
+
+
+                <h3>
+                    THÔNG TIN LIÊN HỆ
+                </h3>
+
+
+                <!-- Facebook -->
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        📘
+                    </span>
+
+
+                    <div class="contact-content">
+
+                        <strong>
+                            Facebook
+                        </strong>
+
+
+                        <a href="https://www.facebook.com/dootea"
+                           target="_blank">
+
+                            facebook.com/dootea
+
+                        </a>
+
+                    </div>
+
                 </div>
+
+
+
+                <!-- Điện thoại -->
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        📞
+                    </span>
+
+
+                    <div class="contact-content">
+
+                        <strong>
+                            Điện thoại
+                        </strong>
+
+
+                        <a href="tel:0987654321">
+
+                            0987 654 321
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ✉️
+                    </span>
+
+
+                    <div class="contact-content">
+
+                        <strong>
+                            Email
+                        </strong>
+
+
+                        <a href="mailto:dootea@gmail.com">
+
+                            dootea@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Địa chỉ -->
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        📍
+                    </span>
+
+
+                    <div class="contact-content">
+
+                        <strong>
+                            Địa chỉ
+                        </strong>
+
+
+                        <p>
+
+                            79 Hồ Tùng Mậu,
+                            Hà Nội, Việt Nam
+
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
 
-            <div class="contact-item">
-                <span class="contact-icon">✉️</span>
 
-                <div class="contact-content">
-                    <strong>Email</strong>
+            <!-- =========================
+                 CỘT 3 - BẢN ĐỒ
+            ========================= -->
 
-                    <a href="mailto:dootea@gmail.com">
-                        dootea@gmail.com
-                    </a>
-                </div>
+            <div class="contact-image">
+
+                <img src="images/bando.jpg"
+                     alt="Bản đồ vị trí Dootea">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <!-- Cột 1 -->
+
+            <div class="footer-column">
+
+                <h3>
+                    DOOTEA
+                </h3>
+
+
+                <p>
+
+                    Mang hương vị trà Việt đến
+                    gần hơn với cuộc sống hiện đại.
+
+                </p>
+
             </div>
 
 
-            <div class="contact-item">
-                <span class="contact-icon">📍</span>
 
-                <div class="contact-content">
-                    <strong>Địa chỉ</strong>
+            <!-- Cột 2 -->
 
-                    <p>
-                        79 Hồ Tùng Mậu, Hà Nội, Việt Nam
-                    </p>
-                </div>
+            <div class="footer-column">
+
+                <h3>
+                    LIÊN KẾT
+                </h3>
+
+
+                <a href="index.html">
+                    Trang chủ
+                </a>
+
+
+                <a href="gioi-thieu.html">
+                    Giới thiệu
+                </a>
+
+
+                <a href="san-pham.html">
+                    Sản phẩm
+                </a>
+
+
+                <a href="lien-he.html">
+                    Liên hệ
+                </a>
+
+            </div>
+
+
+
+            <!-- Cột 3 -->
+
+            <div class="footer-column">
+
+                <h3>
+                    SẢN PHẨM
+                </h3>
+
+
+                <a href="san-pham.html">
+                    Trà xanh
+                </a>
+
+
+                <a href="san-pham.html">
+                    Trà sen
+                </a>
+
+
+                <a href="san-pham.html">
+                    Trà ô long
+                </a>
+
+
+                <a href="san-pham.html">
+                    Trà thảo mộc
+                </a>
+
+            </div>
+
+
+
+            <!-- Cột 4 -->
+
+            <div class="footer-column">
+
+                <h3>
+                    LIÊN HỆ
+                </h3>
+
+
+                <p>
+                    📍 79 Hồ Tùng Mậu, Hà Nội
+                </p>
+
+
+                <p>
+                    📞 0987 654 321
+                </p>
+
+
+                <p>
+                    ✉ dootea@gmail.com
+                </p>
+
             </div>
 
         </div>
 
 
-        <!-- Hình ảnh thương hiệu -->
-        <div class="contact-image">
 
-            <img src="images/Địa chỉ Dootea.png"
-                 alt="Thương hiệu Dootea">
+        <!-- Copyright -->
+
+        <div class="footer-bottom">
+
+            © 2026 DOOTEA. All Rights Reserved.
 
         </div>
 
-    </div>
+    </footer>
 
 
-    <!-- Footer -->
-    <div class="contact-footer">
-        © 2026 DOOTEA. All Rights Reserved.
-    </div>
+</body>
 
-</section>
-
-
-<style>
-
-
-.dootea-contact {
-
-    background: #f4f8f1;
-
-    padding: 60px 30px 25px;
-
-    font-family: "Times New Roman", serif;
-
-    color: #333;
-}
-
-
-.contact-container {
-
-    max-width: 1350px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1.25fr 1.3fr;
-
-    gap: 55px;
-
-    align-items: center;
-}
-
-
-.contact-brand {
-
-    text-align: center;
-}
-
-
-.brand-logo {
-
-    width: 135px;
-
-    height: 135px;
-
-    object-fit: contain;
-
-    border-radius: 50%;
-
-    margin-bottom: 15px;
-}
-
-
-.contact-brand p {
-
-    line-height: 1.8;
-
-    color: #555;
-
-    font-size: 19px;
-
-    font-weight: 500;
-
-    margin: 15px 0 0;
-}
-
-.contact-info {
-
-    width: 100%;
-}
-
-
-.contact-info h3 {
-
-    color: #6e4824;
-
-    margin: 0 0 30px;
-
-    font-size: 25px;
-
-    font-weight: bold;
-
-    letter-spacing: 0.5px;
-}
-
-
-/* Mỗi dòng liên hệ */
-
-.contact-item {
-
-    display: grid;
-
-    grid-template-columns: 45px 1fr;
-
-    align-items: start;
-
-    column-gap: 15px;
-
-    margin-bottom: 25px;
-
-    min-height: 55px;
-}
-
-
-/* Icon */
-
-.contact-icon {
-
-    width: 45px;
-
-    height: 45px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 25px;
-
-    line-height: 1;
-
-}
-
-
-/* Phần nội dung sau icon */
-
-.contact-content {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    min-height: 45px;
-}
-
-
-/* Tên Facebook / Điện thoại / Email / Địa chỉ */
-
-.contact-item strong {
-
-    display: block;
-
-    margin: 0 0 5px;
-
-    color: #397c3b;
-
-    font-size: 19px;
-
-    font-weight: bold;
-
-    line-height: 1.3;
-}
-
-
-/* Nội dung */
-
-.contact-item a,
-.contact-item p {
-
-    color: #555;
-
-    text-decoration: none;
-
-    margin: 0;
-
-    font-size: 18px;
-
-    font-weight: 500;
-
-    line-height: 1.5;
-
-    word-break: break-word;
-}
-
-
-/* Hiệu ứng khi di chuột vào link */
-
-.contact-item a:hover {
-
-    color: #397c3b;
-
-    text-decoration: underline;
-}
-
-
-/* ================================
-   HÌNH ẢNH BÊN PHẢI
-================================ */
-
-.contact-image {
-
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-}
-
-
-.contact-image img {
-
-    width: 100%;
-
-    height: 390px;
-
-    border-radius: 18px;
-
-    object-fit: cover;
-
-    display: block;
-
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
-}
-
-
-/* ================================
-   DÒNG CUỐI FOOTER
-================================ */
-
-.contact-footer {
-
-    text-align: center;
-
-    border-top: 1px solid #dce6d8;
-
-    margin-top: 55px;
-
-    padding-top: 20px;
-
-    color: #777;
-
-    font-size: 15px;
-
-    font-weight: 500;
-}
-
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 900px) {
-
-    .contact-container {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 40px;
-    }
-
-    .contact-image {
-
-        grid-column: 1 / -1;
-
-    }
-
-    .contact-image img {
-
-        height: 350px;
-
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
-    .dootea-contact {
-
-        padding: 45px 20px 20px;
-
-    }
-
-    .contact-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-    }
-
-    .contact-brand {
-
-        text-align: center;
-
-    }
-
-    .contact-info {
-
-        padding: 0 10px;
-
-    }
-
-    .contact-info h3 {
-
-        font-size: 23px;
-
-    }
-
-    .contact-item {
-
-        grid-template-columns: 45px 1fr;
-
-    }
-
-    .contact-image {
-
-        grid-column: auto;
-
-    }
-
-    .contact-image img {
-
-        height: 300px;
-
-    }
-
-}
-
-</style>
-Điểm mình đã chỉnh quan trọng nhất
-
-Phần này:
-
-.contact-item {
-    display: grid;
-    grid-template-columns: 45px 1fr;
-}
-
-sẽ làm 4 icon nằm cùng một cột, còn toàn bộ chữ Facebook, Điện thoại, Email, Địa chỉ nằm cùng một cột bên cạnh → nhìn thẳng hàng hơn nhiều.
-
-Còn:
-
-.contact-item a,
-.contact-item p {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-là phần nội dung sau icon được tăng kích thước và đậm hơn.
-
-Ảnh:
-
-.contact-image img {
-    width: 100%;
-    height: 390px;
-}
-
-sẽ làm ảnh rộng và cao hơn đáng kể so với code cũ.
-
-Nếu sau khi bạn dán vào mà thấy ảnh to quá hoặc phần thông tin liên hệ bị chật, gửi mình ảnh giao diện thực tế, mình chỉnh đúng theo giao diện của bạn.
-
-ảnh bên phải to hơn nhưng k phóng to mà vẫn giữ 100 phần tăm hìnha ảnh mk tải lên, sửa code
-
-
-À hiểu rồi. Bạn muốn một thanh nâu chạy ngang toàn bộ chiều rộng ở phía trên footer, tạo cảm giác phân cách phần nội dung website với footer, chứ không phải chỉ một đường viền mảnh.
-
-Mình nghĩ kiểu này sẽ hợp với Dootea hơn:
-
-────────────────────────────────────────
-████████████████████████████████████████  ← thanh nâu
-              FOOTER
-DOOTEA      LIÊN KẾT      SẢN PHẨM      LIÊN HỆ
-...
-────────────────────────────────────────
-          © 2026 DOOTEA
-Sửa CSS footer thành:
-footer {
-    background-color: #f4f8f1;
-    color: #333;
-    padding: 0 8% 0;
-    font-family: "Times New Roman", serif;
-    border-top: 12px solid #765237;
-}
-
-.footer-content {
-    max-width: 1350px;
-    margin: auto;
-    padding: 50px 0 35px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-}
-
-.footer-column {
-    flex: 1;
-}
-
-.footer-column h3 {
-    color: #765237;
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 22px;
-}
-
-.footer-column p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.footer-column a {
-    display: block;
-    color: #555;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.footer-column a:hover {
-    color: #765237;
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid #d6ddd2;
-    padding: 20px 0;
-    color: #666;
-    font-size: 16px;
-}
-Chỗ quan trọng nhất là:
-border-top: 12px solid #765237;
-
-Nó tạo thanh nâu chạy ngang toàn bộ footer.
-
-Nếu bạn muốn thanh này dày vừa phải, sang hơn, mình khuyên dùng:
-
-border-top: 8px solid #765237;
-
-👉 Với giao diện Dootea của bạn, 8px là mình thấy cân đối nhất: đủ để nhìn ra phần ngăn cách nhưng không bị nặng.
-
-cách sửa thanh menu nó ngắn hơn
-
-Nếu bạn nói thanh menu ngang ở đầu trang đang dài hết chiều rộng và muốn nó ngắn lại, nằm gọn ở giữa, thì sửa CSS của nav nhé.
-
-Ví dụ hiện tại của bạn có:
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    background-color: #765237;
-    padding: 18px 35px;
-    border-radius: 6px;
-}
-Cách 1 — Menu ngắn lại theo đúng độ dài nội dung
-
-Thêm:
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    background-color: #765237;
-    padding: 15px 30px;
-    border-radius: 6px;
-
-    width: fit-content;
-    margin: 0 auto;
-}
-
-👉 width: fit-content; là phần quan trọng nhất.
-Nó làm thanh menu chỉ rộng bằng phần nội dung bên trong, thay vì kéo dài cả màn hình.
-
-Nếu muốn thanh menu vẫn khá dài nhưng không full màn hình
-
-Dùng:
-
-nav {
-    width: 70%;
-    margin: 0 auto;
-}
-
-Ví dụ:
-
-        ┌──────────────────────────────────────────┐
-        │  TRANG CHỦ  GIỚI THIỆU  SẢN PHẨM  LIÊN HỆ │
-        └──────────────────────────────────────────┘
-
-Còn width: fit-content sẽ kiểu:
-
-          ┌────────────────────────────────┐
-          │ TRANG CHỦ  GIỚI THIỆU  SẢN PHẨM │
-          └────────────────────────────────┘
-
-Với Dootea của bạn, mình nghiêng về width: fit-content vì nhìn gọn và giống một thanh menu riêng biệt hơn.
-
-ngắn lại ở bên phải
-
-À, ý bạn là giữ nguyên vị trí bên trái của thanh menu, chỉ muốn nó ngắn lại ở phía bên phải đúng không?
-
-Vậy không dùng width: fit-content và cũng không dùng margin: 0 auto. Chỉ cần giảm padding hoặc đặt chiều rộng cụ thể.
-
-Nếu CSS hiện tại là:
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    background-color: #765237;
-    padding: 18px 35px;
-    border-radius: 6px;
-}
-
-Bạn sửa thành:
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    background-color: #765237;
-    padding: 18px 20px;
-    border-radius: 6px;
-}
-
-Nếu vẫn còn dài bên phải, thì khả năng nav đang bị CSS khác ép width: 100%.
-
-Khi đó thêm:
-
-nav {
-    width: calc(100% - 50px);
-}
-
-Thanh sẽ ngắn vào 50px ở tổng thể, nhưng nếu bạn muốn chỉ hụt 50px ở bên phải và bên trái giữ nguyên, dùng:
-
-nav {
-    width: calc(100% - 50px);
-    margin-right: 50px;
-}
-
-👉 Nếu bạn gửi mình đoạn CSS nav hiện tại, mình có thể chỉ đúng 1 dòng cần sửa để nó ngắn đúng phía bên phải mà không làm lệch menu.
+</html>
