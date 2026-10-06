@@ -1,12 +1,36 @@
+:root {
+    --forest: #725039;
+    --leaf: #94704f;
+    --secondary: #dbd5d0;
+    --background: #fffdf9;
+}
+
+/* =========================
+   PHẦN CHUNG
+========================= */
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--forest);
+    font-family: Arial, sans-serif;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 18px 8%;
-
     background-color: white;
-
     border-bottom: 1px solid #ddd;
 }
 
@@ -21,134 +45,48 @@ header {
     object-fit: contain;
 }
 
-nav { 
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
-    background-color: #775235; 
-    padding: 18px 35px; 
- 
-    border-radius: 6px; 
-} 
- 
-nav a { 
-    text-decoration: none; 
-    color: white; 
- 
-    font-size: 17px; 
-    font-weight: bold; 
- 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px;
-
-    padding-right: 20px;
-    border-right: 1px solid #d8c1ad;
-} 
- 
-nav a:last-child {
-    border-right: none;
-}
-
-nav a:hover { 
-    color: #f3dfc1; 
-}
-footer {
-    background-color: #f4f8f1;
-    color: #333;
-    padding: 0 8% 0;
-    font-family: "Times New Roman", serif;
-    border-top: 45px solid rgb(147, 100, 63);
-}
-
-.footer-content {
-    max-width: 1350px;
-    margin: auto;
-    padding: 50px 0 35px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-}
-
-.footer-column {
-    flex: 1;
-}
-
-.footer-column h3 {
-    color: #765237;
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 22px;
-}
-
-.footer-column p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.footer-column a {
-    display: block;
-    color: #555;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.footer-column a:hover {
-    color: #765237;
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid #d6ddd2;
-    padding: 20px 0;
-    color: #666;
-    font-size: 16px;
-}
-.banner {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-}
-
 nav {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
+    background-color: #775235;
+    padding: 18px 35px;
+    border-radius: 6px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-right: 20px;
+    border-right: 1px solid #d8c1ad;
 }
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    color: #f3dfc1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     background-color: #E8F0E5;
-    color: white;
-
+    color: #333;
     padding: 50px 8% 20px;
 }
 
 .footer-content {
     display: flex;
-
     justify-content: space-between;
-
     gap: 50px;
 }
 
@@ -157,8 +95,8 @@ footer {
 }
 
 .footer-column h3 {
+    color: #765237;
     font-size: 22px;
-
     margin-bottom: 15px;
 }
 
@@ -174,500 +112,13 @@ footer {
     margin-bottom: 10px;
 }
 
+.footer-column a:hover {
+    color: #725039;
+}
+
 .footer-bottom {
     text-align: center;
-
     border-top: 1px solid #777;
-
     margin-top: 30px;
-
     padding-top: 20px;
 }
-
-
-/* =========================
-   ABOUT PAGE - DOOTEA
-========================= */
-
-.about-page {
-    --primary: #725039;
-    --secondary: #dbd5d0;
-    --background: #fffdf9;
-
-    background: var(--background);
-    color: var(--primary);
-    font-family: Georgia, 'Times New Roman', serif;
-}
-
-
-/* HEADER */
-
-.about-page header {
-    padding: 19px 7%;
-    background: var(--background);
-}
-
-.about-page .logo {
-    color: var(--primary);
-    font-size: 31px;
-    text-decoration: none;
-}
-
-.about-page nav {
-    align-items: center;
-    gap: 27px;
-}
-
-.about-page nav a {
-    color: var(--primary);
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 8px 0;
-}
-
-
-/* KHUNG NỘI DUNG */
-
-.content-width {
-    width: 86%;
-    max-width: 1120px;
-    margin: auto;
-}
-
-
-/* =========================
-   BANNER
-========================= */
-
-.about-hero {
-    height: min(680px, 72vh);
-    min-height: 510px;
-    overflow: hidden;
-    position: relative;
-}
-
-.about-hero > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* =========================
-   PHẦN GIỚI THIỆU
-========================= */
-
-.about-intro {
-    padding: 130px 0;
-}
-
-.section-marker {
-    color: var(--primary);
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.section-marker span {
-    color: var(--secondary);
-    display: inline-block;
-    margin: 0 8px;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-.intro-copy {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10%;
-    margin-top: 40px;
-}
-
-.about-page h2 {
-    color: var(--primary);
-    font-size: clamp(40px, 4vw, 58px);
-    font-weight: normal;
-    line-height: 1.05;
-}
-
-.intro-text,
-.feature-copy > p,
-.process-copy > p {
-    color: var(--primary);
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-
-/* =========================
-   GIÁ TRỊ CỐT LÕI
-========================= */
-
-.about-feature {
-    display: grid;
-    grid-template-columns: 1.03fr .97fr;
-    gap: 11%;
-    align-items: start;
-}
-
-.feature-copy {
-    margin: 0;
-    padding: 0;
-}
-
-.feature-copy h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.feature-copy > p {
-    margin-top: 0;
-}
-
-
-/* ẢNH KHÔNG BỊ CẮT */
-
-.feature-image img {
-    display: block;
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-}
-
-
-/* BỎ CHỮ "GIÁ TRỊ CỐT LÕI" */
-
-.feature-copy .eyebrow {
-    display: none;
-}
-
-
-/* =========================
-   HÀNH TRÌNH
-========================= */
-
-.about-process {
-    background: var(--background);
-    color: var(--primary);
-    padding: 120px 0;
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 11%;
-    align-items: start;
-}
-
-
-/* 02 / HÀNH TRÌNH */
-
-.section-marker.light {
-    color: var(--primary);
-    margin-bottom: 50px;
-}
-
-.process-copy h2 {
-    color: var(--primary);
-}
-
-.process-copy > p:last-child {
-    color: var(--primary);
-}
-
-
-/* ẢNH HÀNH TRÌNH */
-
-.process-image img {
-    display: block;
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-}
-
-/* =========================
-   CÂU TRÍCH DẪN
-========================= */
-
-.about-belief {
-    background: var(--background);
-    padding: 135px 0 140px;
-    text-align: center;
-}
-
-/* ĐIỀU DOOTEA TIN */
-
-.section-divider {
-    width: 100%;
-    height: 3px;
-    background: #dbd5d0;
-    margin: 0 auto;
-}
-
-.about-belief .eyebrow {
-    color: var(--primary);
-    font-size: 15px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-/* CÂU TRÍCH DẪN */
-
-.about-belief blockquote {
-    color: var(--primary);
-    font-size: clamp(28px, 3.7vw, 48px);
-    line-height: 1.25;
-    max-width: 900px;
-    margin: 35px auto;
-}
-
-
-/* TRANG SẢN PHẨM */
-
-
-.product-page {
-    padding: 60px 0;
-}
-
-
-.content-width {
-    width: 84%
-    max-width: 1200px
-    margin: 0 auto;
-}
-
-
-/* PHẦN GIỚI THIỆU */
-
-
-.product-intro {
-    margin-bottom: 50px;
-}
-
-
-.section-marker {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-
-.section-marker span {
-    display: inline-block;
-    margin: 0 8px;
-    line-height: 16px;
-    vertical-align: middle;
-}
-
-
-.product-intro h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-block-start: 20px;
-}
-
-
-.product-intro h1 em {
-    font-style: normal;
-}
-
-
-.product-intro p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-
-
-
-/* DANH SÁCH SẢN PHẨM */
-
-
-.product-list {
-    display: grid;
-    grid-template-columns: rêpat(3,1fr)
-    gap: 30px;
-}
-
-
-
-
-/* KHUNG TỪNG SẢN PHẨM */
-
-
-.product-card {
-    background-color: white;
-    padding: 20px;
-}
-
-
-
-
-/* HÌNH ẢNH SẢN PHẨM */
-
-
-.product-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-
-.product-image img {
-    width: 100%
-    heightL 100%
-    object-fit: cover;
-}
-
-
-
-
-/* THÔNG TIN SẢN PHẨM */
-
-
-
-
-.product-info h2 {
-    font-size: 22px;
-    margin: 18px 0 8px;
-}
-
-
-.product-price {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-
-.product-description {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-
-
-
-/* NÚT THÊM VÀO GIỎ HÀNG */
-
-
-.add-cart {
-    padding: 10px 20px;
-    border: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-}
-
-
-.add-cart:hover {
-    opacity: 0.8;
-}
-
-/* =========================
-   PHẦN CSS TRANG CHỦ
-   ========================= */
-
-.banner {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-body {
-    background: #fffdf9;
-    color: #725039;
-    font-family: Arial, sans-serif;
-}
-
-h2 {
-    text-align: center;
-    margin: 120px 0 30px;
-    font-size: 28px;
-}
-
-p {
-    line-height: 1.7;
-}
-
-/* SẢN PHẨM */
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.product {
-    width: 30%;
-    background: #dbd5d0;
-    text-align: center;
-    padding: 12px;
-}
-
-.product img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-}
-
-.product h3 {
-    margin: 18px 0 5px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* QUY TRÌNH */
-.description {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    font-size: 20px;
-}
-
-.process {
-    display: flex;
-    gap: 12px;
-    margin-top: 35px;
-}
-
-.step {
-    flex: 1;
-    text-align: center;
-}
-
-.step img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-}
-
-.step p {
-    font-weight: bold;
-}
-
-/* GIÁ TRỊ CỘNG ĐỒNG */
-.community {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    font-size: 20px;
-}
-
-.community img {
-    width: 100%;
-    margin-top: 25px;
-}
-
