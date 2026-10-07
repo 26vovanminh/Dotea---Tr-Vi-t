@@ -18,7 +18,7 @@
 ========================= */
 
 .contact-page .dootea-contact {
-    background-color: #f4f8f1;
+    background-color: #fffdf9;
     padding: 60px 30px;
 }
 
@@ -154,7 +154,7 @@
 
     margin: 0 0 5px;
 
-    color: #397c3b;
+    color: #fffdf9;
 
     font-size: 19px;
 
@@ -183,7 +183,7 @@
 
 
 .contact-page .contact-item a:hover {
-    color: #397c3b;
+    color: #fffdf9;
 
     text-decoration: underline;
 }

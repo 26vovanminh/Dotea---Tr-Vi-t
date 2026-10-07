@@ -5,6 +5,7 @@
     --background: #fffdf9;
 }
 
+
 /* =========================
    PHẦN CHUNG
 ========================= */
@@ -29,45 +30,85 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 18px 8%;
+
     background-color: white;
+
     border-bottom: 1px solid #ddd;
 }
 
-.logo {
+
+/* =========================
+   LOGO HEADER
+========================= */
+
+header .logo {
     display: flex;
     align-items: center;
 }
 
-.logo img {
+header .logo img {
     width: 80px;
     height: 80px;
+
     object-fit: contain;
 }
+
+
+/* =========================
+   MENU
+========================= */
 
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+
     background-color: #775235;
-    padding: 18px 35px;
+
+    padding: 18px 30px;
+
     border-radius: 6px;
+
+    gap: 0;
+
+    font-family: Arial, sans-serif;
 }
+
+
+/* =========================
+   CÁC MỤC MENU
+========================= */
 
 nav a {
     text-decoration: none;
+
     color: white;
-    font-size: 17px;
-    font-weight: bold;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 20px !important;
+
+    font-weight: bold !important;
+
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding-right: 20px;
+
+    letter-spacing: 0.3px;
+
+    padding: 0 25px;
+
     border-right: 1px solid #d8c1ad;
 }
+
+
+/* BỎ ĐƯỜNG KẺ Ở MỤC CUỐI */
 
 nav a:last-child {
     border-right: none;
 }
+
+
+/* HIỆU ỨNG KHI DI CHUỘT */
 
 nav a:hover {
     color: #f3dfc1;
@@ -79,46 +120,174 @@ nav a:hover {
 ========================= */
 
 footer {
-    background-color: #E8F0E5;
+
+    background-color: #fffdf9;
+
     color: #333;
+
     padding: 50px 8% 20px;
+
+    font-family: "Times New Roman", serif;
+
+    /* THANH NÂU NGĂN CÁCH */
+    border-top: 6px solid #765237;
 }
+
+
+/* =========================
+   KHU VỰC 4 CỘT
+========================= */
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 60px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    align-items: start;
 }
+
+
+/* =========================
+   TỪNG CỘT
+========================= */
 
 .footer-column {
-    flex: 1;
+
+    text-align: left;
+
 }
+
+
+/* =========================
+   TIÊU ĐỀ FOOTER
+========================= */
 
 .footer-column h3 {
+
     color: #765237;
-    font-size: 22px;
-    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    margin: 0 0 25px;
+
+    height: 31px;
+
+    line-height: 31px;
+
+    text-align: left;
 }
+
+
+/* =========================
+   RIÊNG CỘT DOOTEA
+========================= */
+
+.footer-column:first-child {
+
+    text-align: center;
+
+}
+
+
+.footer-column:first-child h3 {
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   NỘI DUNG + LINK
+   ĐỂ CÁC HÀNG THẲNG NHAU
+========================= */
+
+.footer-column p,
+.footer-column a {
+
+    font-size: 19px;
+
+    line-height: 30px;
+
+    height: 30px;
+
+    margin: 0 0 12px;
+
+    padding: 0;
+}
+
+
+/* NỘI DUNG */
 
 .footer-column p {
-    margin-bottom: 8px;
+
+    color: #333;
+
 }
+
+
+/* LINK */
 
 .footer-column a {
+
     display: block;
+
     color: #765237;
+
     text-decoration: none;
-    font-size: 18px;
-    margin-bottom: 10px;
+
 }
+
+
+/* =========================
+   RIÊNG ĐOẠN GIỚI THIỆU DOOTEA
+========================= */
+
+.footer-column:first-child p {
+
+    text-align: center;
+
+    height: auto;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   HOVER LINK
+========================= */
 
 .footer-column a:hover {
+
     color: #725039;
+
 }
 
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
 .footer-bottom {
-    text-align: center;
-    border-top: 1px solid #777;
-    margin-top: 30px;
+
+    max-width: 1200px;
+
+    margin: 40px auto 0;
+
     padding-top: 20px;
+
+    border-top: 1px solid #777;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    color: #333;
 }
